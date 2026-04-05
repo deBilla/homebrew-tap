@@ -10,7 +10,7 @@ class KubeGpu < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.0/kube-gpu_darwin_amd64.tar.gz"
-      sha256 "1490d9e04d6f90df3eb281a15ab60d42c4cfad777a8a0f3a8dc0e095f3568c93"
+      sha256 "a8fe170a67b2bf132c3e457ca0119ea88bd7cd1634db49a0cc355c26aa023ee6"
 
       define_method(:install) do
         bin.install "kube-gpu"
@@ -18,7 +18,7 @@ class KubeGpu < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.0/kube-gpu_darwin_arm64.tar.gz"
-      sha256 "cb817d12b4e23458ca2aa47a6d22b50a18b5ca95a123d7a9d8962850c69a6ac0"
+      sha256 "60c3f92b5a49bcf2b4f1329af656649c24ea9eeaa5177ba092129eb926bda3e7"
 
       define_method(:install) do
         bin.install "kube-gpu"
@@ -29,14 +29,14 @@ class KubeGpu < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.0/kube-gpu_linux_amd64.tar.gz"
-      sha256 "5ef5c9720649961c7c6521ab619d785d801d1151c16df9f66a69d2856882309c"
+      sha256 "de6cd19f8aed22cb94b9c9d60bf47a39b4d7e32dc303732faa18569c68293f0b"
       define_method(:install) do
         bin.install "kube-gpu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.0/kube-gpu_linux_arm64.tar.gz"
-      sha256 "0ac053e4893cbd69f46a4e44f96c443e5040cbde627c5ec37582c784061430f6"
+      sha256 "e81f496ba4f387cbbbac244f19e19e60fcb121ca5c3ba7bd72914919938e3846"
       define_method(:install) do
         bin.install "kube-gpu"
       end
