@@ -5,20 +5,20 @@
 class KubeGpu < Formula
   desc "Inspect GPU allocation across a Kubernetes cluster"
   homepage "https://github.com/deBilla/kube-gpu"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.0/kube-gpu_darwin_amd64.tar.gz"
-      sha256 "a8fe170a67b2bf132c3e457ca0119ea88bd7cd1634db49a0cc355c26aa023ee6"
+      url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.1/kube-gpu_darwin_amd64.tar.gz"
+      sha256 "82813eadd951b9b722a77983764b86d4dbd9f9c120810357aa031ab24473451a"
 
       define_method(:install) do
         bin.install "kube-gpu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.0/kube-gpu_darwin_arm64.tar.gz"
-      sha256 "60c3f92b5a49bcf2b4f1329af656649c24ea9eeaa5177ba092129eb926bda3e7"
+      url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.1/kube-gpu_darwin_arm64.tar.gz"
+      sha256 "ccae7668368d18f3fdcc2d05e08e68e5ea9bae124d94474d7a3d00e7018c8be6"
 
       define_method(:install) do
         bin.install "kube-gpu"
@@ -28,15 +28,15 @@ class KubeGpu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.0/kube-gpu_linux_amd64.tar.gz"
-      sha256 "de6cd19f8aed22cb94b9c9d60bf47a39b4d7e32dc303732faa18569c68293f0b"
+      url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.1/kube-gpu_linux_amd64.tar.gz"
+      sha256 "7660d6156d1a8c05f55428765af7b0165f9caecdb5509b9fb839b25e96f67434"
       define_method(:install) do
         bin.install "kube-gpu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.0/kube-gpu_linux_arm64.tar.gz"
-      sha256 "e81f496ba4f387cbbbac244f19e19e60fcb121ca5c3ba7bd72914919938e3846"
+      url "https://github.com/deBilla/kube-gpu/releases/download/v0.1.1/kube-gpu_linux_arm64.tar.gz"
+      sha256 "75174e2b22bfcf95d8fda564f710b17176d1d6420db82f1bff632cc781f61cff"
       define_method(:install) do
         bin.install "kube-gpu"
       end
